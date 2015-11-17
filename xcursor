@@ -1,0 +1,16 @@
+http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html
+http://www.x.org/archive/current/doc/man/man3/Xcursor.3.xhtml
+
+----------
+
+export XCURSOR_PATH=~/.icons:~/.nix-profile/share/icons:/var/run/current-system/sw/share/icons:/usr/share/icons:/usr/share/pixmaps
+
+xsetroot -cursor_name left_ptr
+
+gsettings set org.gnome.desktop.interface cursor-size 48
+gsettings set org.gnome.desktop.interface cursor-theme Vanilla-DMZ-AA
+
+----------
+
+http://cgit.freedesktop.org/xorg/lib/libXcursor/tree/src/library.c
+#define XCURSORPATH "~/.icons:/usr/share/icons:/usr/share/pixmaps:"ICONDIR
